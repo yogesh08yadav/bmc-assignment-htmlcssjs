@@ -1,0 +1,367 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 100%;
+  height: 90px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.navbar .logo .menu {
+  display: none;
+}
+
+.navbar .options {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: #0058ac;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar .options span {
+  cursor: pointer;
+}
+
+.navbar .options span:first-child {
+  color: #d43200;
+}
+
+.navbar .options .bar {
+  color: #beb9b9;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  background-color: #f2f3f3;
+}
+
+.content .header {
+  width: 100%;
+  height: 50%;
+}
+
+.content .stories {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  height: 40%;
+}
+
+.content .stories .filters {
+  flex: 1;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.content .stories .filters .size-filter {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.content .stories .filters .size-filter h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.content .stories .filters .size-filters {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 20px;
+  color: rgb(57, 145, 238);
+  display: none;
+  transition: 0.5s ease-in-out;
+}
+
+.content .stories .filters .size-filters.show {
+  display: block;
+}
+
+.content .stories .story {
+  flex: 4;
+  padding: 10px;
+}
+
+.content .stories .story .selected-filter {
+  font-size: 20px;
+  color: gray;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  margin-bottom: 24px;
+}
+
+.content .stories .story .featured-story .customer-story h2 {
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.content .stories .story .featured-story .featured-card {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content .stories .story .featured-story .featured-card .left {
+  background-color: white;
+  color: black;
+  padding: 20px 0 0 20px;
+  height: 100%;
+  width: 100%;
+  flex: 2;
+  cursor: pointer;
+}
+
+.content .stories .story .featured-story .featured-card .left .card-header {
+  padding: 20px 0 0 0;
+}
+.card-header hr{
+  width: 56px;
+  height: 8px;
+  background: #0058ac;
+}
+
+.content .stories .story .featured-story .featured-card .left .card-content {
+  margin-bottom: 43px;
+}
+
+.content .stories .story .featured-story .featured-card .left .card-content hr {
+  width: 56px;
+  height: 8px;
+  background: #0058ac;
+}
+
+.content .stories .story .featured-story .featured-card .left .card-content h1 {
+  font-size: 45px;
+  font-weight: 400;
+  padding: 25px 0 0 0;
+}
+
+.content .stories .story .featured-story .featured-card .left .card-content p {
+  font-size: 22px;
+  color: gray;
+  padding: 15px 0 0 0;
+}
+
+.content .stories .story .featured-story .featured-card .right {
+  background-color: #0058ac;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+}
+
+.content .stories .story .featured-story .featured-card .right .image {
+  display: flex;
+  height: 77%;
+}
+
+.content .stories .story .featured-story .featured-card .right img {
+  margin: auto;
+}
+
+.content .stories .story .featured-story .featured-card .right .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: white;
+  padding: 10px 0;
+}
+
+.content .stories .story .featured-story .featured-card .left:hover {
+  background-color: #0058ac;
+  color: white;
+}
+
+.content .stories .story .featured-story .featured-card .left:hover hr {
+  background: white;
+}
+
+.content .stories .story .featured-story .featured-card .left:hover p {
+  color: white;
+}
+
+.content .stories .customer-story {
+  margin-top: 30px;
+}
+
+.content .stories .customer-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.content .stories .customer-cards-mobile {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.pagination-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+  flex-direction: column;
+  height: 100px;
+}
+
+.pagination-btn p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.pagination-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: whitesmoke;
+  background-color: #0058ca;
+  height: 70px;
+  width: 195px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 30px;
+  border-radius: 5px;
+  font-size: 21px;
+}
+
+/* customer card */
+
+.customerCard {
+  height: 350px;
+  padding: 20px 20px 0 20px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.customerCard:hover {
+  background-color: #d7f1fc;
+}
+
+.customerCard .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25%;
+  width: 100%;
+}
+
+.customerCard .left {
+  color: black;
+  height: 50%;
+  width: 100%;
+  flex: 2;
+  cursor: pointer;
+}
+
+.customerCard .left .card-header {
+  padding: 20px 0 0 0;
+}
+
+.customerCard .left .card-content {
+  margin-bottom: 30px;
+}
+
+.customerCard .left .card-content hr {
+  width: 56px;
+  height: 8px;
+  background: #0058ac;
+}
+
+.customerCard .left .card-content h1 {
+  font-size: 45px;
+  font-weight: 400;
+  padding: 25px 0 0 0;
+}
+
+.customerCard .left .card-content p {
+  font-size: 22px;
+  color: gray;
+  padding: 15px 0 0 0;
+}
+
+.customerCard .footer {
+  width: 100%;
+  height: 25%;
+}
+
+.customerCard .footer .icons {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  color: #0058ac;
+}
+
+
+@media (max-width: 960px) {
+  .stories {
+    flex-direction: column;
+  }
+
+  .navbar .logo .menu {
+    display: flex;
+    border-right: 1px solid gray;
+    padding-right: 4px;
+  }
+
+  .navbar .options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    color: #0058ac;
+    font-size: 20px;
+    font-weight: 700;
+    position: fixed;
+    top: 90px;
+    right: -1200px;
+    width: 100%;
+    height: 100vh;
+    transition: 0.5s ease-in-out;
+    background-color: #fff;
+    padding: 50px;
+  }
+
+  .navbar .options .bar {
+    display: none;
+  }
+
+  .navbar .options.active {
+    right: 0px;
+  }
+}
+
+
