@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
   const menu = document.getElementById("menu");
   const menuIcon = document.getElementById("menu-icon");
   const options = document.getElementById("options");
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .then((res) => {
         customerCards.innerHTML = "";
+        // create customer cards dynamically
         res.results.slice(0, pageCount * pageSize).forEach((card) => {
           let cardDiv = document.createElement("div");
           cardDiv.classList.add("customerCard");
@@ -154,11 +155,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // pagination load more button event listener
   loadMoreBtn.addEventListener("click", () => {
     pageCount++;
     fetchData();
   });
 
+  // to make the page responsive
   window.addEventListener("resize", function () {
     if (window.innerWidth <= 960) {
       customerCards.classList.remove("customer-cards");
@@ -170,4 +173,4 @@ document.addEventListener("DOMContentLoaded", function () {
       headerImage.src = "./images/bmc-home-page.png";
     }
   });
-});
+})();
